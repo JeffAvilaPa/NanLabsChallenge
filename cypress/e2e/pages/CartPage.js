@@ -20,14 +20,14 @@ class CartPage {
       if ($body.find('.cart_delete a').length) {
         cy.get('.cart_delete a').each(($btn) => {
           cy.wrap($btn).click({ force: true })
-          cy.wait(500) // dar tiempo para que se procese la eliminación
+          cy.wait(500)
         })
       } else {
         cy.log('No items to delete from cart')
       }
     })
 
-    // Verificar que no queden filas de productos
+    
     cy.get('.cart_info tbody tr').should('not.exist')
   }
 }

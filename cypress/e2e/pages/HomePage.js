@@ -4,7 +4,7 @@ class HomePage {
     }
   
     verifyHomePageVisible() {
-      cy.get('body').should('contain.text', 'Home') // puede afinarse
+      cy.get('body').should('contain.text', 'Home')
     }
   
     clickSignupLogin() {
